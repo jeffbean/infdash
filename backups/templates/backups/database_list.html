@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Alias</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        {% for db in object_list %}
+            <tr>
+                <td>{{ db.name }}</td>
+                <td>{{ db.alias }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+
+    </table>
+{% endblock %}
